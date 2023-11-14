@@ -1,3 +1,4 @@
+<!-- HTML Group 21 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,8 +14,8 @@
         <nav>
             <div class="top-nav">
                 <div class="login-signup">
-                    <button class="btn-secondary">Log In</button>
-                    <button class="btn-primary">Sign Up</button>
+                    <a href="#login"><button class="btn-secondary">Log In</button></a>
+                    <a href="#button"><button class="btn-primary">Sign Up</button></a>
                 </div>
             </div>
             <nav class="main-nav">
@@ -25,23 +26,63 @@
                 <label for="check" class="checkbtn">
                     <i class="fas fa-bars"></i>
                 </label>
-                <ul>
-                    <li><a class="active" href="#home">Home</a></li>
+                <ul class="menu-list">
+                    <li><a class="active" href="index.html">Home</a></li>
                     <li><a href="#menu">Menu</a></li>
                     <li><a href="#reservation">Reservation</a></li>
                     <li><a href="#contact">Contact Us</a></li>
-                    <li><a href="#cart" class="cart-link"><i class="fas fa-shopping-cart"></i></a></li>
-                    <li><button class="btn-primary">Order Now</button></li>
+                    <li><a href="#search" class="search" id="search-button"><i class="fas fa-search"></i></a></li>
+                    <li><a href="#cart" class="cart-link" id="shopping-cart-button"><i class="fas fa-shopping-cart"></i></a></li>
                 </ul>
+
+                <!-- search -->
+                <div class="search-form">
+                    <input type="search" id="search-box" placeholder="cari disini...">
+                    <label for="search-box"><i dclass="fas fa-search"></i></label>
+                </div>
+
+                <!-- cart -->
+                <div class="shopping-cart">
+                    <div class="cart-item">
+                        <img src="./asset/img1.png" alt="Product 1">
+                        <div class="item-detail">
+                        <h3>TheArtPizza21</h3>
+                        <div class="item-price">Rp 100.000</div>
+                        </div>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </div>
+                    <div class="cart-item">
+                        <img src="./asset/img1.png" alt="Product 1">
+                        <div class="item-detail">
+                        <h3>TheArtPizza21</h3>
+                        <div class="item-price">Rp 100.000</div>
+                        </div>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </div>
+                    <div class="cart-item">
+                        <img src="./asset/img1.png" alt="Product 1">
+                        <div class="item-detail">
+                        <h3>TheArtPizza21</h3>
+                        <div class="item-price">Rp 100.000</div>
+                        </div>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </div>
+                </div>
             </nav>
         </nav>
     </header>
     
-    <section>
-    </section>
+    <main>
+        <div class="hero">
+
+        </div>
+    </main>
 
     <footer>
         <p>&copy; 2023 TheArtPizza21. All rights reserved.</p>
     </footer>
+
+    <!-- Javascript -->
+    <script src="./js/script.js"></script>
 </body>
 </html>

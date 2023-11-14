@@ -1,3 +1,4 @@
+/* CSS Group 21 */
 /* Reset default browser styles */
 * {
     margin: 0;
@@ -14,6 +15,7 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Header Styles */
 /* Top Navigation Bar */
 .top-nav {
     background: #FF8616;
@@ -27,6 +29,7 @@ body {
     padding: 0.5rem 1rem;
     background: none;
     border: 1px solid #fff;
+    border-radius: 15px;
     color: #fff;
     cursor: pointer;
 }
@@ -48,6 +51,8 @@ body {
 }
 
 .main-nav .logo img {
+    margin-left: 20px;
+    margin-top: 15px;
     width: 115px; 
     max-height: 94px;
 }
@@ -73,6 +78,7 @@ body {
 
 .main-nav ul a.active {
     background: #e8491d;
+    border-radius: 20px;
 }
 
 .main-nav a:hover,
@@ -80,28 +86,106 @@ body {
     opacity: 0.5;
 }
 
-.main-nav ul .btn-primary {
-    background: #FF8616;
+.main-nav ul .search {
     color: #ffffff;
-    padding: 0.7rem 1.4rem;
-    text-decoration: none;
-    font-weight: bold;
     display: inline-block;
-    border: none;
-    border-radius: 5px;
-    transition: opacity 0.3s ease;
 }
 
-.main-nav ul .btn-primary:hover {
+.main-nav ul .search:hover {
     opacity: 0.5;
 }
 
+/* Search btn */
+.main-nav .search-form {
+    position: absolute;
+    top: 140px;
+    right: 70px;
+    width: 15.625rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.3s;
+}
+
+.main-nav .search-form.active {
+    transform: scaleY(1);
+}
+
+.main-nav .search-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 15px;
+    color: var(--bg);
+    padding: rem;
+}
+
+.main-nav .search-form label {
+    cursor: pointer;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    color: var(--bg);
+}
+
+/* Cart btn */
 .main-nav ul .cart-link {
     position: relative;
+    margin-right: 20px;
 }
 
 .main-nav ul .cart-link .fas {
     font-size: 1.2rem;
+}
+
+.main-nav .shopping-cart {
+    position: absolute;
+    top: 165px;
+    transform: scaleY(0);
+    height: auto;
+    width: 20rem;
+    padding: 0 1.5rem;
+    background-color: #fff;
+    color: var(--bg);
+}
+
+.main-nav .shopping-cart.active {
+    right: 0;
+    transform: scaleY(1);
+}
+
+.main-nav .shopping-cart .cart-item {
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #666;
+    position: relative;
+}
+
+.main-nav .shopping-cart img {
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.main-nav .shopping-cart h3 {
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.main-nav .shopping-cart .item-price {
+    font-size: 0.75rem;
+}
+
+.main-nav .shopping-cart .fa-solid {
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.main-nav .shopping-cart .fa-solid:hover {
+    opacity: 0.6;
 }
 
 /* Hamburger btn */
@@ -119,6 +203,7 @@ body {
     display: none;
 }
 
+/* Responsive Header */
 @media (max-width: 960px) {
     .main-nav ul li {
         display: inline-block;
@@ -133,27 +218,32 @@ body {
 
 @media (max-width: 858px) {
     .main-nav .logo img {
+        margin-left: 20px;
+        margin-top: 15px;
         width: 115px; 
         max-height: 94px;
     }
 
     .main-nav ul {
         position: fixed;
-        width: 100%;
+        width: 10rem;
         height: 100vh;
         background: #000000;
-        top: 80px;
-        left: 0;
-        text-align: center;
+        top: 115px;
+        right: 0;
+        transition: 0.3 ease;
+        margin-right: 0;
     }
 
     .main-nav ul li {
         display: block;
-        margin: 20px;
+        line-height: 50px;
     }
 
     .main-nav ul li a {
-        font-size: 20px;
+        font-size: 15px;
+        text-transform: capitalize;
+
     }
 
     .main-nav ul a.active {
@@ -162,11 +252,23 @@ body {
     }
 
     .main-nav ul a {
-        opacity: 0.7;
+        opacity: 0.8;
     }
 
-    .top-nav, .main-nav ul .cart-link, .main-nav ul .btn-primary {
+    .main-nav ul a:hover {
+        opacity: 0.5;
+    }
+
+    .top-nav, .main-nav ul .cart-link, .main-nav ul .search {
         display: none;
+    }
+
+    .main-nav .search-form.active {
+        transform: scaleY(0);
+    }
+
+    .main-nav .shopping-cart.active {
+        transform: scaleY(0);
     }
 
     .checkbtn {
@@ -174,12 +276,27 @@ body {
     }
 
     #check:checked ~ ul {
-        left: 0;
+        position: absolute; 
+        top: 115px; 
+        right: 0; 
+        width: 10rem; 
+        height: 100vh;
+        z-index: 11;
     }
 }
 
-section {
+/* Main Styles */
+main {
     background: no-repeat;
     background-size: cover;
     height: calc(100vh - 115px);
 }
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+}
+/* End Footer Sytles */
