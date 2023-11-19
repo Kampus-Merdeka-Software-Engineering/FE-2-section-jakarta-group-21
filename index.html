@@ -1,88 +1,367 @@
 <!-- HTML Group 21 -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Art Pizza 21</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="top-nav">
-                <div class="login-signup">
-                    <a href="#login"><button class="btn-secondary">Log In</button></a>
-                    <a href="#button"><button class="btn-primary">Sign Up</button></a>
-                </div>
-            </div>
-            <nav class="main-nav">
-                <div class="logo">
-                    <img src="./asset/logoShop.png" alt="Brand Logo">
-                </div>
-                <input type="checkbox" id="check">
-                <label for="check" class="checkbtn">
-                    <i class="fas fa-bars"></i>
-                </label>
-                <ul class="menu-list">
-                    <li><a class="active" href="index.html">Home</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#reservation">Reservation</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                    <li><a href="#search" class="search" id="search-button"><i class="fas fa-search"></i></a></li>
-                    <li><a href="#cart" class="cart-link" id="shopping-cart-button"><i class="fas fa-shopping-cart"></i></a></li>
-                </ul>
-
-                <!-- search -->
-                <div class="search-form">
-                    <input type="search" id="search-box" placeholder="cari disini...">
-                    <label for="search-box"><i dclass="fas fa-search"></i></label>
-                </div>
-
-                <!-- cart -->
-                <div class="shopping-cart">
-                    <div class="cart-item">
-                        <img src="./asset/img1.png" alt="Product 1">
-                        <div class="item-detail">
-                        <h3>TheArtPizza21</h3>
-                        <div class="item-price">Rp 100.000</div>
-                        </div>
-                        <i class="fa-solid fa-trash-can"></i>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Art Pizza 21</title>
+        <link rel="shortcut icon" type="image/png" href="./asset/iconShop.png">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="top-nav">
+                    <div class="login-signup">
+                        <a href="#login"><button class="btn-secondary">Log In</button></a>
+                        <a href="#button"><button class="btn-primary">Sign Up</button></a>
                     </div>
-                    <div class="cart-item">
-                        <img src="./asset/img1.png" alt="Product 1">
-                        <div class="item-detail">
-                        <h3>TheArtPizza21</h3>
-                        <div class="item-price">Rp 100.000</div>
-                        </div>
-                        <i class="fa-solid fa-trash-can"></i>
+                </div>
+                <div class="main-nav">
+                    <div class="logo">
+                        <img src="./asset/logoShop.png" alt="Brand Logo">
                     </div>
-                    <div class="cart-item">
-                        <img src="./asset/img1.png" alt="Product 1">
-                        <div class="item-detail">
-                        <h3>TheArtPizza21</h3>
-                        <div class="item-price">Rp 100.000</div>
+                    <input type="checkbox" id="check">
+                    <label for="check" class="checkbtn">
+                        <i class="fas fa-bars"></i>
+                    </label>
+                    <ul class="menu-list">
+                        <li><a class="active" href="index.html">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#order">Order</a></li>
+                        <li><a href="#event">Event</a></li>
+                        <li><a href="#search" class="search" id="search-button"><i class="fas fa-search"></i></a></li>
+                        <li><a href="#cart" class="cart-link" id="shopping-cart-button"><i class="fas fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <!-- search -->
+                    <div class="search-form">
+                        <input type="search" id="search-box" placeholder="cari disini...">
+                        <label for="search-box"><i dclass="fas fa-search"></i></label>
+                    </div>
+                    <!-- cart -->
+                    <div class="shopping-cart">
+                        <div class="cart-item">
+                            <img src="./asset/img1.png" alt="Product 1">
+                            <div class="item-detail">
+                            <h3>TheArtPizza21</h3>
+                            <div class="item-price">Rp 100.000</div>
+                            </div>
+                            <i class="fa-solid fa-trash-can"></i>
                         </div>
-                        <i class="fa-solid fa-trash-can"></i>
+                        <div class="cart-item">
+                            <img src="./asset/img1.png" alt="Product 1">
+                            <div class="item-detail">
+                            <h3>TheArtPizza21</h3>
+                            <div class="item-price">Rp 100.000</div>
+                            </div>
+                            <i class="fa-solid fa-trash-can"></i>
+                        </div>
+                        <div class="cart-item">
+                            <img src="./asset/img1.png" alt="Product 1">
+                            <div class="item-detail">
+                            <h3>TheArtPizza21</h3>
+                            <div class="item-price">Rp 100.000</div>
+                            </div>
+                            <i class="fa-solid fa-trash-can"></i>
+                        </div>
                     </div>
                 </div>
             </nav>
-        </nav>
-    </header>
-    
-    <main>
-        <div class="hero">
-
+        </header>
+        <main>
+            <div class="hero">
+                <div class="hero-text">
+                    <h1>
+                        Come together <br>
+                        <span>partake in the feast</span> <br>
+                        savor the essence <br>
+                        <span>of true flavor</span>
+                    </h1>
+                    <a href="#menu" class="btn">Explore Menu<i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#about" class="btn2">About Us</a>
+                </div>
+                <div class="hero-img">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./asset/img1.png" class="imgbox"></div>
+                            <div class="swiper-slide"><img src="./asset/img2.png" class="imgbox"></div>
+                            <div class="swiper-slide"><img src="./asset/img3.png" class="imgbox"></div>
+                            <div class="swiper-slide"><img src="./asset/img4.png" class="imgbox"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about" id="about">
+                <div class="middle-text">
+                    <h4>About Us</h4>
+                    <h2>Customer satisfaction is a priority for us</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-img">
+                        <img src="./asset/aboutImg.jpg">
+                    </div>
+                    <div class="about-text">
+                        <p> We have been in operation since 2023 with a mission to serve delicious 
+                            and quality pizza at affordable prices. We use high-quality ingredients 
+                            to craft our pizzas. Our pizza crust is made from premium flour that undergoes 
+                            a 24-hour fermentation process, resulting in a soft and chewy texture. Our tomato 
+                            sauce is made from fresh tomatoes cooked with selected spices, creating a rich and 
+                            flavorful taste. We also offer a variety of pizza menu options, from classic to 
+                            uniquely topped pizzas. We are confident that you will find a pizza you love at The Art Pizza 21. <br><br>
+                            We are committed to providing the best service to our customers. 
+                            We always strive to meet our customers' needs and deliver a pleasant dining experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimoni">
+                <div class="middle-text">
+                    <h4>Testimoni</h4>
+                </div>
+                <div class="testimoni-content">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="box">
+                                    <div class="in-box">
+                                        <div class="bx-img">
+                                            <img src="./asset/review1.png">
+                                        </div>
+                                        <div class="bx-text">
+                                            <h4>Anthony David Alexander</h4>
+                                            <p>The sensation of vegetable pizza for me is amazing and very suitable for a healthy lifestyle</p>
+                                        </div>
+                                        <div class="bx-rate">
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="box">
+                                    <div class="in-box">
+                                        <div class="bx-img">
+                                            <img src="./asset/review2.png">
+                                        </div>
+                                        <div class="bx-text">
+                                            <h4>Audrey Carol</h4>
+                                            <p>The taste is very good and so is the service. I ordered a classic pizza which was amazing. My sister had amazing pasta</p>
+                                        </div>
+                                        <div class="bx-rate">
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="box">
+                                    <div class="in-box">
+                                        <div class="bx-img">
+                                            <img src="./asset/review3.png">
+                                        </div>
+                                        <div class="bx-text">
+                                            <h4>Ryna Azura Dacota</h4>
+                                            <p>This place has become one of my favorite places because the menu served really makes me happy</p>
+                                        </div>
+                                        <div class="bx-rate">
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-regular fa-star"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="box">
+                                    <div class="in-box">
+                                        <div class="bx-img">
+                                            <img src="./asset/review4.png">
+                                        </div>
+                                        <div class="bx-text">
+                                            <h4>Carolina Gracella</h4>
+                                            <p>I really recomend, It was late at night and we were hungry. They make it perfect. Hot and delicious. Very polite for late night orders!</p>
+                                        </div>
+                                        <div class="bx-rate">
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="box">
+                                    <div class="in-box">
+                                        <div class="bx-img">
+                                            <img src="./asset/review5.png">
+                                        </div>
+                                        <div class="bx-text">
+                                            <h4>Danielle Marsh</h4>
+                                            <p>Affordable, the taste so good and i think yous should try it.</p>
+                                        </div>
+                                        <div class="bx-rate">
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-regular fa-star"></i></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="box">
+                                    <div class="in-box">
+                                        <div class="bx-img">
+                                            <img src="./asset/review6.png">
+                                        </div>
+                                        <div class="bx-text">
+                                            <h4>Karina Claudia</h4>
+                                            <p>This pizza is perfect for celebrating with family and friends, I really like the classic pizza.</p>
+                                        </div>
+                                        <div class="bx-rate">
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="box">
+                                    <div class="in-box">
+                                        <div class="bx-img">
+                                            <img src="./asset/review7.png">
+                                        </div>
+                                        <div class="bx-text">
+                                            <h4>Felix Hann</h4>
+                                            <p>I was recommended by my office friend, and I think this pizza is very delicious.</p>
+                                        </div>
+                                        <div class="bx-rate">
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-solid fa-star"></i></a>
+                                            <a href="#"><i class="fa-regular fa-star"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <div class="sec more-company">
+                    <h2>More About Company</h2>
+                    <p>Visit our outlets which are available in various cities closest to you and enjoy the impressive taste and service there. We will try to maintain the commitment we have made to maintain your trust. Wait for the next surprise</p>
+                </div>
+                <div class="sec social-media">
+                    <h2>Our Social Media</h2>
+                    <ul class="list-social-media">
+                        <li>
+                            <a href=""><span><i class="fa-brands fa-square-x-twitter"></i></span></a>
+                            <span>Follow us on X</span>
+                        </li>
+                        <li>
+                            <a href=""><span><i class="fa-brands fa-square-facebook"></i></span></a>
+                            <span>Like us on Facebook</span>
+                        </li>
+                        <li>
+                            <a href=""><span><i class="fa-brands fa-square-instagram"></i></span></a>
+                            <span>Follow us on Instagram</span>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-solid fa-envelope"></i></a>
+                            <span>Add us on Email</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sec contact-us">
+                    <h2>Contact Us</h2>
+                    <ul class="list-contact-us">
+                        <li>
+                            <span><i class="fa-solid fa-location-dot"></i></span>
+                            <span>
+                                Unit No 5 Ruko Jati Makmur<br>
+                                Residence Pondok Gede, Bekasi,<br>
+                                West Java 17413
+                            </span>
+                        </li>
+                        <li>
+                            <span><i class="fa-solid fa-phone"></i></span>
+                            <p>
+                                <a href="tel:+621812345678900">+6281 234 567 8900</a><br>
+                                <a href="tel:+621812345678900">+6281 234 567 8900</a>
+                            </p>
+                        </li>
+                        <li>
+                            <span><i class="fa-solid fa-calendar"></i></span>
+                            <p>
+                                Weekday: 10.30 am - 09.00 pm<br>
+                                Weekend: 09.00 am - 10.00 pm 
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <div class="copyrightText">
+            <p>Copyright © 2023 The Art Pizza 21. All Rights Reserved</p>
         </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2023 TheArtPizza21. All rights reserved.</p>
-    </footer>
-
-    <!-- Javascript -->
-    <script src="./js/script.js"></script>
-</body>
+        <!-- Javascript -->
+        <script src="./js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                grabCursor: true,
+                loop: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+            });
+            var swiper2 = new Swiper(".mySwiper2", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                loop: true,
+                slidesPerView: "auto",
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 500,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+            });
+        </script>
+    </body>
 </html>
