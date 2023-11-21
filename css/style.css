@@ -157,6 +157,7 @@ body {
     width: 20rem;
     background-color: var(--second-color);
     color: var(--bg);
+    z-index: 50;
 }
 
 .main-nav .shopping-cart.active {
@@ -219,6 +220,8 @@ main {
     background-size: cover;
     padding: 0px 10% 60px;
 }
+
+/* HOME */
 /* Hero */
 .hero {
     height: 100vh;
@@ -438,6 +441,116 @@ main {
     font-size: 18px;
     margin-right: 5px;
 }
+/* End HOME */
+
+/* Menu */
+.menu .middle-text h2, .middle-text h4 {
+    margin-top: 40px;
+}
+
+.popular-menu, .new-menu, .other-menu, .drink-menu {
+    margin-bottom: 20px;
+}
+
+.shape{
+    display: inline-block;
+    padding: 15px 35px;
+    background: var(--other-color);
+    color: var(--main-color);
+    font-size: var(--p-font);
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 3rem;
+    transition: all .50s ease;
+}
+
+.menu-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px, auto));
+    gap: 2rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.row{
+    position: relative;
+    padding: 10px 35px 40px;
+    background: var(--other-color);
+    border-radius: 3rem;
+    height: 600px;
+}
+
+.row img{
+    width: 100%;
+    height: auto;
+    transition: transform .50s ease;
+    cursor: pointer;
+}
+
+.row h3{
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.row p{
+    color:var(--second-color);
+    font-size: var(--p-font);
+    line-height: 30px;
+    margin-bottom: 1.1rem;
+}
+
+.in-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.in-text .price h6{
+    font-size: 17px;
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.in-text .btn-order a{
+    display: inline-block;
+    padding: 9px 23px;
+    background: var(--bg-color);
+    color: var(--main-color);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 3rem;
+    transition: all .50s ease;
+}
+
+.in-text .btn-order a:hover{
+    background: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: #ff9f0d 0px 1px 10px;
+}
+
+.top-icon{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    background: var(--button-primary);
+}
+
+.top-icon h5{
+    font-size: 16px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.row img:hover{
+    transform: scale(1.1);
+}
+
+/* End Menu */
 
 /* Footer Styles */
 footer {
@@ -567,10 +680,6 @@ footer {
 
 @media (max-width: 890px) {
     /* Responsive Header */
-    .main-nav {
-        position: sticky;
-    }
-
     .main-nav .logo img {
         margin-left: 20px;
         margin-top: 15px;
@@ -587,6 +696,7 @@ footer {
         right: 0;
         transition: 0.3 ease;
         margin-right: 0;
+        /* display: none; */
     }
 
     .main-nav ul li {
@@ -633,7 +743,6 @@ footer {
         right: 0; 
         width: 10rem; 
         height: 100vh;
-        z-index: 11;
     }
 
     /* Responsive Footer */
