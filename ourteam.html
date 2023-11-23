@@ -1,0 +1,315 @@
+<!-- HTML Group 21 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Art Pizza 21</title>
+        <link rel="shortcut icon" type="image/png" href="./asset/iconShop.png">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="top-nav">
+                    <div class="login-signup">
+                        <a href="#login"><button class="btn-secondary">Log In</button></a>
+                        <a href="#button"><button class="btn-primary">Sign Up</button></a>
+                    </div>
+                </div>
+                <div class="main-nav">
+                    <div class="logo">
+                        <img src="./asset/logoShop.png" alt="Brand Logo">
+                    </div>
+                    <input type="checkbox" id="check">
+                    <label for="check" class="checkbtn">
+                        <i class="fas fa-bars"></i>
+                    </label>
+                    <ul class="menu-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a  href="./menu.html">Menu</a></li>
+                        <li><a href="#order">Order</a></li>
+                        <li><a class="active" href="ourteam.html">Our Team</a></li>
+                        <li><a href="#search" class="search" id="search-button"><i class="fas fa-search"></i></a></li>
+                        <li><a href="#cart" class="cart-link" id="shopping-cart-button"><i class="fas fa-shopping-cart"></i></a></li>
+                    </ul>
+                    <!-- search -->
+                    <div class="search-form">
+                        <input type="search" id="search-box" placeholder="cari disini...">
+                        <label for="search-box"><i dclass="fas fa-search"></i></label>
+                    </div>
+                    <!-- cart -->
+                    <div class="shopping-cart">
+                        <div class="cart-item">
+                            <img src="./asset/img1.png" alt="Product 1">
+                            <div class="item-detail">
+                            <h3>TheArtPizza21</h3>
+                            <div class="item-price">Rp 100.000</div>
+                            </div>
+                            <i class="fa-solid fa-trash-can"></i>
+                        </div>
+                        <div class="cart-item">
+                            <img src="./asset/img1.png" alt="Product 1">
+                            <div class="item-detail">
+                            <h3>TheArtPizza21</h3>
+                            <div class="item-price">Rp 100.000</div>
+                            </div>
+                            <i class="fa-solid fa-trash-can"></i>
+                        </div>
+                        <div class="cart-item">
+                            <img src="./asset/img1.png" alt="Product 1">
+                            <div class="item-detail">
+                            <h3>TheArtPizza21</h3>
+                            <div class="item-price">Rp 100.000</div>
+                            </div>
+                            <i class="fa-solid fa-trash-can"></i>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!-- <div class="ourteam">
+                <div class="middle-text">
+                    <h2>Our Team</h2>
+                </div>
+            </div> -->
+            <div class="ourteam-content">
+                <div class="team-container">
+                    <div class="icon">
+                        <div class="imgBox" style="--i:1;" data-id="content1">
+                            <img src="./asset/our-team/Abdul.png">
+                        </div>
+                        <div class="imgBox" style="--i:2;" data-id="content2">
+                            <img src="./asset/our-team/Andre.png">
+                        </div>
+                        <div class="imgBox" style="--i:3;" data-id="content3">
+                            <img src="./asset/our-team/Alfi.png">
+                        </div>
+                        <div class="imgBox" style="--i:4;" data-id="content4">
+                            <img src="./asset/our-team/Risya.png">
+                        </div>
+                        <div class="imgBox" style="--i:5;" data-id="content5">
+                            <img src="./asset/our-team/Rizky.png">
+                        </div>
+                        <div class="imgBox active" style="--i:6;" data-id="content6">
+                            <img src="./asset/our-team/Ruth.png">
+                        </div>
+                        <div class="imgBox" style="--i:7;" data-id="content7">
+                            <img src="./asset/our-team/Val.png">
+                        </div>
+                    </div>
+                    <div class="icon-content">
+                        <div class="contentBox" id="content1">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="./asset/our-team/Abdul.png">
+                                </div>
+                                <div class="textBox">
+                                    <h2>Abdul Talif Parinduri<br><span>Back End Engineer</span></h2>
+                                    <ul class="socialmedia">
+                                        <li><a href="https://instagram.com/abdullt85"><i class="fa-brands fa-instagram"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/in/abdul-talif"><i class="fa-brands fa-linkedin"></i></a></li>
+                                        <li><a href="abdultalif85@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contentBox" id="content2">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="./asset/our-team/Andre.png">
+                                </div>
+                                <div class="textBox">
+                                    <h2>Andre S Tampubolon<br><span>Quality Assurance</span></h2>
+                                    <ul class="socialmedia">
+                                        <li><a href="https://instagram.com/andre.tampubolon17?igshid=OGQ5ZDc2ODk2ZA=="><i class="fa-brands fa-instagram"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/in/andre-s-tampubolon-808308284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a></li>
+                                        <li><a href="andre.stampubolon17@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contentBox" id="content3">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="./asset/our-team/Alfi.png">
+                                </div>
+                                <div class="textBox">
+                                    <h2>Muhammad Alfi Syahri<br><span>Front End Engineer</span></h2>
+                                    <ul class="socialmedia">
+                                        <li><a href="https://www.instagram.com/invites/contact/?i=j3xs1emyu9k4&utm_content=758exew"><i class="fa-brands fa-instagram"></i></a></li>
+                                        <li><a href="http://www.linkedin.com/in/m-alfisyahri"><i class="fa-brands fa-linkedin"></i></a></li>
+                                        <li><a href="alfisyahri845@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contentBox" id="content4">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="./asset/our-team/Risya.png">
+                                </div>
+                                <div class="textBox">
+                                    <h2>Risya Maulidia<br><span>Front End Engineer</span></h2>
+                                    <ul class="socialmedia">
+                                        <li><a href="https://instagram.com/rishyarsyy?igshid=YTQwZjQ0NmI0OA"><i class="fa-brands fa-instagram"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/in/risya-maulidia-007b47280?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a></li>
+                                        <li><a href="risyamaulidia11@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contentBox" id="content5">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="./asset/our-team/Rizky.png">
+                                </div>
+                                <div class="textBox">
+                                    <h2>Rizky Christian Widyanto<br><span>Front End Engineer</span></h2>
+                                    <ul class="socialmedia">
+                                        <li><a href="http://instagram.com/rchristianw"><i class="fa-brands fa-instagram"></i></a></li>
+                                        <li><a href="https://id.linkedin.com/in/rizkychristianw"><i class="fa-brands fa-linkedin"></i></a></li>
+                                        <li><a href="rizkychristian0906@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contentBox active" id="content6">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="./asset/our-team/Ruth.png">
+                                </div>
+                                <div class="textBox">
+                                    <h2>Ruth Aulya Silalahi<br><span>Project Leader</span></h2>
+                                    <ul class="socialmedia">
+                                        <li><a href="https://www.instagram.com/hii.yoo02/"><i class="fa-brands fa-instagram"></i></a></li>
+                                        <li><a href="https://www.linkedin.com/in/ruthaulyasilalahi/"><i class="fa-brands fa-linkedin"></i></a></li>
+                                        <li><a href="ruthauliyas@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contentBox" id="content7">
+                            <div class="card">
+                                <div class="imgBox">
+                                    <img src="./asset/our-team/Val.png">
+                                </div>
+                                <div class="textBox">
+                                    <h2>Val Kyla Harwanto<br><span>Quality Assurance</span></h2>
+                                    <ul class="socialmedia">
+                                        <li><a href="http://instagram.com/valet_angkot"><i class="fa-brands fa-instagram"></i></a></li>
+                                        <li><a href="https://id.linkedin.com/in/val-harwanto"><i class="fa-brands fa-linkedin"></i></a></li>
+                                        <li><a href="valharwanto@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-text">
+                    <h1>Hello!</h1><br>
+                    <p>
+                        We are from Group 21, <span>Section Jakarta.</span><br>
+                        If you'd like to get to know us, please direct your attention to our respective pictures.
+                    </p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <div class="sec more-company">
+                    <h2>More About Company</h2>
+                    <p>Visit our outlets which are available in various cities closest to you and enjoy the impressive taste and service there. We will try to maintain the commitment we have made to maintain your trust. Wait for the next surprise</p>
+                </div>
+                <div class="sec social-media">
+                    <h2>Our Social Media</h2>
+                    <ul class="list-social-media">
+                        <li>
+                            <a href=""><span><i class="fa-brands fa-square-x-twitter"></i></span></a>
+                            <span>Follow us on X</span>
+                        </li>
+                        <li>
+                            <a href=""><span><i class="fa-brands fa-square-facebook"></i></span></a>
+                            <span>Like us on Facebook</span>
+                        </li>
+                        <li>
+                            <a href=""><span><i class="fa-brands fa-square-instagram"></i></span></a>
+                            <span>Follow us on Instagram</span>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-solid fa-envelope"></i></a>
+                            <span>Add us on Email</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sec contact-us">
+                    <h2>Contact Us</h2>
+                    <ul class="list-contact-us">
+                        <li>
+                            <span><i class="fa-solid fa-location-dot"></i></span>
+                            <span>
+                                Unit No 5 Ruko Jati Makmur<br>
+                                Residence Pondok Gede, Bekasi,<br>
+                                West Java 17413
+                            </span>
+                        </li>
+                        <li>
+                            <span><i class="fa-solid fa-phone"></i></span>
+                            <p>
+                                <a href="tel:+621812345678900">+6281 234 567 8900</a><br>
+                                <a href="tel:+621812345678900">+6281 234 567 8900</a>
+                            </p>
+                        </li>
+                        <li>
+                            <span><i class="fa-solid fa-calendar"></i></span>
+                            <p>
+                                Weekday: 10.30 am - 09.00 pm<br>
+                                Weekend: 09.00 am - 10.00 pm 
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <div class="copyrightText">
+            <p>Copyright © 2023 The Art Pizza 21. All Rights Reserved</p>
+        </div>
+        <!-- Javascript -->
+        <script src="./js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                grabCursor: true,
+                loop: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+            });
+            var swiper2 = new Swiper(".mySwiper2", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                loop: true,
+                slidesPerView: "auto",
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 500,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+            });
+        </script>
+    </body>
+</html>
