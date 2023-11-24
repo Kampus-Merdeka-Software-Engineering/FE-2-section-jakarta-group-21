@@ -643,5 +643,132 @@ footer {
 
     .footer .footer-container {
         grid-template-columns: repeat(1, 1fr);
-    }
+    }    
 } 
+    /*Login*/
+    .login{
+        padding-top: 50px;
+        width :690px;
+        height:650px;
+        background-color:#1E1E1E ;
+        border-radius: 10px;
+        text-align:center;
+        margin-left: 800px;
+        color:#ff8616; 
+    }
+    .login-container {
+        width: 417px;
+        height: 33px;
+        margin-top: 100px;
+        border-radius: 50px;
+      }
+    .form-group {
+        margin-bottom: 15px;
+        color: #fff;  
+      }
+  
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        text-align: left;
+        padding-inline-start: 100px;
+        
+      }
+  
+    .form-group input {
+        width: 500px;
+        height: 50px;
+        padding: 500px, 100px;
+        border-radius: 10px;
+        margin-top: 10px;
+        padding-inline-start: 10px;
+        font-size: medium;
+      }
+  
+    .form-group1 button {
+        background-color:#FF8616;
+        color: white;
+        width: 300px;
+        height: 50px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        margin-top: 50px;
+        font-size: 15px;
+      }
+      .form-group2 button {
+        background-color:#FF8616;
+        color: white;
+        width: 300px;
+        height: 50px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        margin-top: 20px;
+        font-size: 15px;
+      }
+
+/*Penutup login*/  
+
+    /* Registrasi */
+    .background{
+        background-image:url("../asset/lovbackground.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 50px;
+   
+    }
+    .registrasi{
+        padding-top: 50px;
+        width :690px;
+        height:850px;
+        background-color:#1E1E1E ;
+        border-radius: 10px;
+        text-align:center;
+        margin-left: 800px;
+        color:#ff8616; 
+    }
+    .registrasi-container {
+        width: 417px;
+        height: 33px;
+        margin-top: 100px;
+        border-radius: 50px;
+      }
+      .info-regis{
+        color:#fff;
+      }
+      .form-group {
+        margin-bottom: 15px;
+        color: #fff;  
+      }
+  
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        text-align: left;
+        padding-inline-start: 100px;
+        
+      }
+  
+      .form-group input {
+        width: 500px;
+        height: 50px;
+        padding: 500px, 100px;
+        border-radius: 10px;
+        margin-top: 10px;
+        padding-inline-start: 10px;
+        font-size: medium;
+      }
+  
+      .form-group button {
+        background-color:#FF8616;
+        color: white;
+        width: 300px;
+        height: 50px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        margin-top: 50px;
+        font-size: 15px;
+      }
+/*Penutup Regis*/

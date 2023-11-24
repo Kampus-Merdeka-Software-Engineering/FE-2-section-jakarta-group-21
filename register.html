@@ -1,0 +1,90 @@
+<!-- HTML Group 21 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Art Pizza 21</title>
+        <link rel="shortcut icon" type="image/png" href="./asset/iconShop.png">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    </head>
+    <body>
+        <main class="background">
+<!-- registrasi  -->
+        <div class="registrasi">
+            <registrasi-container>
+                <h1>
+                    Registration
+                </h1>
+                <p class="info-regis">Please Enter Your Personal Data</p>
+                <br> </br>
+             </registrasi-container>
+             <form>
+                <div class="form-group">
+                    <label for="username">Name :</label>
+                    <input type="text" id="username" name="username" required>
+                 </div>
+                 <div class="form-group">
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+                 </div>
+                 <div class="form-group">
+                    <label for="password">Passsword :</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="password2"> Password Confirmation :</label>
+                    <input type="password2" id="password2" name="password2" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number :</label>
+                    <input type="number" id="phone" name="phone" requirerd>
+                </div>
+                <div class="form-group">
+                  <button type="submit">Sign Up</button>
+                </div>
+              </form>
+             </div>
+             
+        </main>
+        <div class="copyrightText">
+            <p>Copyright © 2023 The Art Pizza 21. All Rights Reserved</p>
+        </div>
+        <!-- Javascript -->
+        <script src="./js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                grabCursor: true,
+                loop: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+            });
+            var swiper2 = new Swiper(".mySwiper2", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                loop: true,
+                slidesPerView: "auto",
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 500,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+            });
+        </script>
+    </body>
+</html>
