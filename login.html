@@ -8,74 +8,40 @@
         <link rel="shortcut icon" type="image/png" href="./asset/iconShop.png">
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     </head>
-    <body>
-        <main class="background">
-<!-- Login  -->
-        <div class="login">
-            <login-container>
-                <h1>
-                    Welcome
-                </h1>
-                <br> </br>
-                <br> </br>
-             </login-container>
-             <form>
-                 <div class="form-group">
-                    <label for="email">Please input your email address :</label>
-                    <input type="email" id="email" name="email" required>
-                 </div>
-                 <div class="form-group">
-                    <label for="password">Please input your email password :</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <div class="form-group1">
-                  <button type="submit">Login</button>
-                </div>
-                <div class="form-group2">
-                    <button type="submit">Google</button>
-                  </div>
-              </form>
-             </div>
-             
-        </main>
-        <div class="copyrightText">
-            <p>Copyright © 2023 The Art Pizza 21. All Rights Reserved</p>
+    <body class="login-body">
+        <div class="container-login">
+            <div class="form-container sign-in">
+                <form action="">
+                    <h2>Login</h2>
+                    <div class="input-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-group">
+                        <input id="pass" type="password" required>
+                        <span class="show-pass" onclick="toggle()">
+                            <i class="far fa-eye"></i>
+                        </span>
+                        <label for="pass">Password</label>
+                    </div>
+                    <div class="remember">
+                        <label><input type="checkbox"> Remember me</label>
+                    </div>
+                    <button type="submit">Login</button>
+                    <div class="signUp-link">
+                        <p>Don't have an account? <a href="register.html">Sign Up</a></p>
+                    </div>
+                    <div class="signUp-link">
+                        <p><a href="index.html" class="signInBtn-link">Back to Home</a></p>
+                    </div>
+                </form>
+            </div>
         </div>
         <!-- Javascript -->
         <script src="./js/script.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script>
-            var swiper = new Swiper(".mySwiper", {
-                grabCursor: true,
-                loop: true,
-                centeredSlides: true,
-                slidesPerView: "auto",
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
-            });
-            var swiper2 = new Swiper(".mySwiper2", {
-                effect: "coverflow",
-                grabCursor: true,
-                centeredSlides: true,
-                loop: true,
-                slidesPerView: "auto",
-                coverflowEffect: {
-                    rotate: 0,
-                    stretch: 0,
-                    depth: 500,
-                    modifier: 1,
-                    slideShadows: true,
-                },
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-            });
-        </script>
     </body>
 </html>

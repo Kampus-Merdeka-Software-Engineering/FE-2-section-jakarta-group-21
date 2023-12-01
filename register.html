@@ -8,83 +8,81 @@
         <link rel="shortcut icon" type="image/png" href="./asset/iconShop.png">
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     </head>
-    <body>
-        <main class="background">
-<!-- registrasi  -->
-        <div class="registrasi">
-            <registrasi-container>
-                <h1>
-                    Registration
-                </h1>
-                <p class="info-regis">Please Enter Your Personal Data</p>
-                <br> </br>
-             </registrasi-container>
-             <form>
-                <div class="form-group">
-                    <label for="username">Name :</label>
-                    <input type="text" id="username" name="username" required>
-                 </div>
-                 <div class="form-group">
-                    <label for="email">Email :</label>
-                    <input type="email" id="email" name="email" required>
-                 </div>
-                 <div class="form-group">
-                    <label for="password">Passsword :</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <div class="form-group">
-                    <label for="password2"> Password Confirmation :</label>
-                    <input type="password2" id="password2" name="password2" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number :</label>
-                    <input type="number" id="phone" name="phone" requirerd>
-                </div>
-                <div class="form-group">
-                  <button type="submit">Sign Up</button>
-                </div>
-              </form>
-             </div>
-             
-        </main>
-        <div class="copyrightText">
-            <p>Copyright © 2023 The Art Pizza 21. All Rights Reserved</p>
+    <body class="register-body">
+        <div class="container-register">
+            <div class="form-container sign-up">
+                <form action="">
+                    <h2>Sign Up</h2>
+                    <div class="input-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="tel" id="phone" required>
+                        <label for="phone">Phone</label>
+                    </div>
+                    <div class="input-group">
+                        <input id="pass" type="password" oninput="checkStrength(this.value)" required>
+                        <span class="show-pass" onclick="toggle()">
+                            <i class="far fa-eye"></i>
+                        </span>
+                        <label for="pass">Password</label>
+                    </div>
+                    <div id="popover-password" style="display: none;">
+                        <p><span class="result"></span></p>
+                        <div class="progress">
+                            <div id="password-strength" class="progress-bar" role="progressbar"></div>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li>
+                                <span class="low-upper-case">
+                                    <i class="fa-solid fa-circle" aria-hidden="true"></i>
+                                    &nbsp;Lowercase &amp; Uppercase
+                                </span>
+                            </li>
+                            <li>
+                                <span class="one-number">
+                                    <i class="fa-solid fa-circle" aria-hidden="true"></i>
+                                    &nbsp;Number (0-9)
+                                </span> 
+                            </li>
+                            <li>
+                                <span class="one-special-char">
+                                    <i class="fa-solid fa-circle" aria-hidden="true"></i>
+                                    &nbsp;Special Character (!@#$%^&*)
+                                </span>
+                            </li>
+                            <li>
+                                <span class="eight-character">
+                                    <i class="fa-solid fa-circle" aria-hidden="true"></i>
+                                    &nbsp;At least 8 Characters
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="input-group">
+                        <input id="confirm_pass" type="password" required onkeyup="validate_password()">
+                        <label for="confirm_pass">Confirmation Password</label>
+                        <span id="confirm_pass_error"></span>
+                    </div>
+                    <div class="remember">
+                        <label><input type="checkbox" id="agree_terms"> I agree to the terms & conditions</label>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                    <div class="signUp-link">
+                        <p>Already have an account? <a href="login.html">Sign In</a></p>
+                    </div>
+                    <div class="signUp-link">
+                        <p><a href="index.html" class="signInBtn-link">Back to Home</a></p>
+                    </div>
+                </form>
+            </div>
         </div>
         <!-- Javascript -->
         <script src="./js/script.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script>
-            var swiper = new Swiper(".mySwiper", {
-                grabCursor: true,
-                loop: true,
-                centeredSlides: true,
-                slidesPerView: "auto",
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
-            });
-            var swiper2 = new Swiper(".mySwiper2", {
-                effect: "coverflow",
-                grabCursor: true,
-                centeredSlides: true,
-                loop: true,
-                slidesPerView: "auto",
-                coverflowEffect: {
-                    rotate: 0,
-                    stretch: 0,
-                    depth: 500,
-                    modifier: 1,
-                    slideShadows: true,
-                },
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-            });
-        </script>
     </body>
 </html>

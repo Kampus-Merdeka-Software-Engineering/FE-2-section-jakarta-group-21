@@ -16,8 +16,8 @@
             <nav>
                 <div class="top-nav">
                     <div class="login-signup">
-                        <a href="#login"><button class="btn-secondary">Log In</button></a>
-                        <a href="#button"><button class="btn-primary">Sign Up</button></a>
+                        <a href="login.html"><button class="btn-secondary">Log In</button></a>
+                        <a href="register.html"><button class="btn-primary">Sign Up</button></a>
                     </div>
                 </div>
                 <div class="main-nav">
@@ -31,7 +31,7 @@
                     <ul class="menu-list">
                         <li><a href="index.html">Home</a></li>
                         <li><a  href="./menu.html">Menu</a></li>
-                        <li><a href="#order">Order</a></li>
+                        <!-- <li><a href="#order">Order</a></li> -->
                         <li><a class="active" href="ourteam.html">Our Team</a></li>
                         <li><a href="#search" class="search" id="search-button"><i class="fas fa-search"></i></a></li>
                         <li><a href="#cart" class="cart-link" id="shopping-cart-button"><i class="fas fa-shopping-cart"></i></a></li>
@@ -280,36 +280,5 @@
         </div>
         <!-- Javascript -->
         <script src="./js/script.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script>
-            var swiper = new Swiper(".mySwiper", {
-                grabCursor: true,
-                loop: true,
-                centeredSlides: true,
-                slidesPerView: "auto",
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
-            });
-            var swiper2 = new Swiper(".mySwiper2", {
-                effect: "coverflow",
-                grabCursor: true,
-                centeredSlides: true,
-                loop: true,
-                slidesPerView: "auto",
-                coverflowEffect: {
-                    rotate: 0,
-                    stretch: 0,
-                    depth: 500,
-                    modifier: 1,
-                    slideShadows: true,
-                },
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-            });
-        </script>
     </body>
 </html>
