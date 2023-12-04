@@ -1,0 +1,128 @@
+/* CSS Group 21 */
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --main-color: #ff8616;
+    --text-color: #fff;
+    --text-color2: #9e9e9e;
+    --other-color: #313443;
+    --second-color: #22252e;
+    --bg-color: #111111;
+    --button-primary: #e8491d;
+
+    --big-font: 4.5rem;
+    --h2-font: 2.6rem;
+    --p-font: 1.1rem;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--text-color2);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar-navigation {
+    display: inline-block;
+    min-height: 100vh;
+    width: 80px;
+    background-color: var(--other-color);
+    float: left;
+}
+
+.sidebar-navigation ul {
+    text-align: center;
+    color: var(--text-color);
+}
+
+.sidebar-navigation ul li {
+    padding: 28px 0;
+    cursor: pointer;
+    transition: all ease-out 120ms;
+}
+
+.sidebar-navigation ul li i {
+    display: block;
+    font-size: 24px;
+    transition: all ease 450ms;
+}
+
+.sidebar-navigation ul li .tooltip {
+    display: inline-block;
+    position: absolute;
+    background-color: var(--other-color);
+    padding: 8px 15px;
+    border-radius: 3px;
+    margin-top: -26px;
+    left: 90px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-navigation ul li .tooltip:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -4px;
+    top: 10px;
+    transform: rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background-color: inherit;
+}
+
+.sidebar-navigation ul li:hover {
+    background-color: var(--second-color);
+}
+
+.sidebar-navigation ul li:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sidebar-navigation ul li.active {
+    background-color: var(--second-color);
+}
+
+.sidebar-navigation ul li.active i {
+    color: var(--main-color);
+}
+
+.main-content {
+    margin-left: 80px;
+    padding: 20px;
+}
+
+.content {
+    height: auto;
+    display: relative;
+    justify-content: center;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 16px;
+}
+
+.copyrightText {
+    width: 100%;
+    background: var(--main-color);
+    text-align: center;
+    padding: 8px 100px;
+    color: var(--text-color);
+}
