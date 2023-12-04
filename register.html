@@ -1,175 +1,97 @@
 <!-- HTML Group 21 -->
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< Updated upstream
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Art Pizza 21</title>
-    <link rel="shortcut icon" type="image/png" href="./asset/iconShop.png">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-</head>
-
-<body class="register-body">
-    <div class="container-register">
-        <div class="form-container sign-up">
-            <form id="register">
-                <h2>Sign Up</h2>
-                <div class="input-group">
-                    <input type="email" id="email" required>
-                    <label for="email">Email</label>
-                </div>
-                <div class="input-group">
-                    <input type="text" id="name" required>
-                    <label for="name">Name</label>
-                </div>
-                <div class="input-group">
-                    <input type="text" id="phone" required>
-                    <label for="phone">Phone</label>
-                </div>
-                <div class="input-group">
-                    <input id="pass" type="password" oninput="checkStrength(this.value)" required>
-                    <span class="show-pass" onclick="toggle()">
-                        <i class="far fa-eye"></i>
-                    </span>
-                    <label for="pass">Password</label>
-                </div>
-                <div id="popover-password" style="display: none;">
-                    <p><span class="result"></span></p>
-                    <div class="progress">
-                        <div id="password-strength" class="progress-bar" role="progressbar"></div>
-=======
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>The Art Pizza 21</title>
-        <link rel="shortcut icon" type="image/png" href="./asset/iconShop.png">
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="shortcut icon" type="image/png" href="./asset/iconShop.png" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-            rel="stylesheet">
+            rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     </head>
+
     <body class="register-body">
         <div class="container-register">
             <div class="form-container sign-up">
-                <form action="">
+                <form id="register">
                     <h2>Sign Up</h2>
                     <div class="input-group">
-                        <input type="text" id="name" required>
+                        <input type="email" id="email" required />
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="name" required />
                         <label for="name">Name</label>
                     </div>
                     <div class="input-group">
-                        <input type="email" id="email" required>
-                        <label for="email">Email</label>
->>>>>>> Stashed changes
+                        <input type="text" id="phone" required />
+                        <label for="phone">Phone</label>
                     </div>
-                    <ul class="list-unstyled">
-                        <li>
-                            <span class="low-upper-case">
-                                <i class="fa-solid fa-circle" aria-hidden="true"></i>
-                                &nbsp;Lowercase &amp; Uppercase
-                            </span>
-                        </li>
-                        <li>
-                            <span class="one-number">
-                                <i class="fa-solid fa-circle" aria-hidden="true"></i>
-                                &nbsp;Number (0-9)
-                            </span>
-                        </li>
-                        <li>
-                            <span class="one-special-char">
-                                <i class="fa-solid fa-circle" aria-hidden="true"></i>
-                                &nbsp;Special Character (!@#$%^&*)
-                            </span>
-                        </li>
-                        <li>
-                            <span class="eight-character">
-                                <i class="fa-solid fa-circle" aria-hidden="true"></i>
-                                &nbsp;At least 8 Characters
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="input-group">
-                    <input id="confirm_pass" type="password" required onkeyup="validate_password()">
-                    <label for="confirm_pass">Confirmation Password</label>
-                    <span id="confirm_pass_error"></span>
-                </div>
-                <div class="remember">
-                    <label><input type="checkbox" id="agree_terms"> I agree to the terms & conditions</label>
-                </div>
-                <button type="submit">Sign Up</button>
-                <div class="signUp-link">
-                    <p>Already have an account? <a href="login.html">Sign In</a></p>
-                </div>
-                <div class="signUp-link">
-                    <p><a href="index.html" class="signInBtn-link">Back to Home</a></p>
-                </div>
-            </form>
+                    <div class="input-group">
+                        <input id="pass" type="password" oninput="checkStrength(this.value)" required />
+                        <span class="show-pass" onclick="toggle()">
+                            <i class="far fa-eye"></i>
+                        </span>
+                        <label for="pass">Password</label>
+                    </div>
+                    <div id="popover-password" style="display: none">
+                        <p><span class="result"></span></p>
+                        <div class="progress">
+                            <div id="password-strength" class="progress-bar" role="progressbar"></div>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li>
+                                <span class="low-upper-case">
+                                    <i class="fa-solid fa-circle" aria-hidden="true"></i>
+                                    &nbsp;Lowercase &amp; Uppercase
+                                </span>
+                            </li>
+                            <li>
+                                <span class="one-number">
+                                    <i class="fa-solid fa-circle" aria-hidden="true"></i>
+                                    &nbsp;Number (0-9)
+                                </span>
+                            </li>
+                            <li>
+                                <span class="one-special-char">
+                                    <i class="fa-solid fa-circle" aria-hidden="true"></i>
+                                    &nbsp;Special Character (!@#$%^&*)
+                                </span>
+                            </li>
+                            <li>
+                                <span class="eight-character">
+                                    <i class="fa-solid fa-circle" aria-hidden="true"></i>
+                                    &nbsp;At least 8 Characters
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="input-group">
+                        <input id="confirm_pass" type="password" required onkeyup="validate_password()" />
+                        <label for="confirm_pass">Confirmation Password</label>
+                        <span id="confirm_pass_error"></span>
+                    </div>
+                    <div class="remember">
+                        <label><input type="checkbox" id="agree_terms" /> I agree to the terms &
+                            conditions</label>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                    <div class="signUp-link">
+                        <p>Already have an account? <a href="login.html">Sign In</a></p>
+                    </div>
+                    <div class="signUp-link">
+                        <p><a href="index.html" class="signInBtn-link">Back to Home</a></p>
+                    </div>
+                </form>
+            </div>
         </div>
-<<<<<<< Updated upstream
-    </div>
-    <!-- Javascript -->
-
-    <!-- Javascript -->
-    <script src="./js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./js/script.js"></script>
-
-    <script>
-        const form = document.getElementById('register');
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            const email = document.getElementById('email').value;
-            const name = document.getElementById('name').value;
-            const password = document.getElementById('pass').value;
-            const confirm_pass = document.getElementById('confirm_pass').value;
-            const phone = document.getElementById('phone').value;
-
-            fetch('https://be-2-section-jakarta-group-21-production.up.railway.app/api-public/register', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    email: email,
-                    password: password,
-                    name: name,
-                    no_telp: phone,
-                    confirm_pass: confirm_pass,
-
-                })
-            })
-                .then(response => response.json())
-                .then((data) => {
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Registrasi Berhasil',
-                    }).then(() => {
-                        window.location.href = 'login.html';
-                    });
-                })
-                .catch(error => {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Registrasi Gagal'
-                    });
-                });
-        })
-    </script>
-</body>
-
-=======
         <!-- Javascript -->
         <script src="./js/main.js"></script>
         <script src="./js/auth.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </body>
->>>>>>> Stashed changes
 </html>
