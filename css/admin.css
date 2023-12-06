@@ -25,7 +25,7 @@
 
 body {
     color: var(--text-color);
-    background-color: var(--text-color2);
+    background-color: var(--second-color);
     height: 100vh;
     overflow: hidden;
 }
@@ -47,6 +47,11 @@ body {
     padding: 28px 0;
     cursor: pointer;
     transition: all ease-out 120ms;
+}
+
+.sidebar-navigation ul li a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .sidebar-navigation ul li i {
@@ -104,9 +109,11 @@ body {
 }
 
 .content {
-    height: auto;
-    display: relative;
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
@@ -119,10 +126,100 @@ body {
     font-size: 16px;
 }
 
-.copyrightText {
+.content h2, .content p {
+    margin-bottom: 10px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
     background: var(--main-color);
     text-align: center;
     padding: 8px 100px;
     color: var(--text-color);
+}
+
+/* Admin-testimoni&menu  */
+.main-content-testimoni {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: auto;
+    height: calc(100vh - 80px);
+}
+
+.main-content-testimoni::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.main-content-testimoni h1 {
+    color: var(--button-primary);
+}
+
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.form-container {
+    max-width: 300px;
+    flex-basis: calc(50% - 10px);
+}
+
+input[type="text"], input[type="file"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#testimonials-container {
+    max-width: 60%;
+    margin-left: 20px;
+    overflow: auto;
+}
+
+.testimoni-container {
+    max-width: 100%;
+    border-collapse: collapse;
+}
+
+.testimoni-container th, .testimoni-container td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.testimoni-container tr:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.testimoni-container button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.testimoni-container tr img {
+    max-width: 60px;
+}
+
+.testimoni-container button:hover {
+    background-color: #0069d9;
 }

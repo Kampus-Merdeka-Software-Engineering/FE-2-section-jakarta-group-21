@@ -163,7 +163,7 @@ nav {
     width: 20rem;
     background-color: var(--second-color);
     color: var(--bg);
-    z-index: 50;
+    z-index: 999;
 }
 
 .main-nav .shopping-cart.active {
@@ -272,7 +272,6 @@ main {
 .hero .hero-img .swiper-slide img {
     display: block;
 }
-
 /* end swiper */
 
 .hero .hero-text {
@@ -398,7 +397,6 @@ main {
     background-size: cover;
     width: 350px;
 }
-
 /* End swiper */
 
 .testimoni-content .box {
@@ -449,10 +447,9 @@ main {
     font-size: 18px;
     margin-right: 5px;
 }
-
 /* End HOME */
 
-/* Menu */
+/* MENU */
 .menu .middle-text h2,
 .middle-text h4 {
     margin-top: 40px;
@@ -562,7 +559,6 @@ main {
 .row img:hover {
     transform: scale(1.1);
 }
-
 /* End Menu */
 
 /* Our Team Styles */
@@ -896,7 +892,6 @@ footer {
     padding: 8px 100px;
     color: var(--text-color);
 }
-
 /* End Footer Sytles */
 
 
@@ -925,7 +920,6 @@ footer {
 }
 
 @media (max-width: 890px) {
-
     /* Responsive Header */
     .main-nav .logo img {
         margin-left: 20px;

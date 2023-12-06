@@ -14,7 +14,7 @@
     <body class="login-body">
         <div class="container-login">
             <div class="form-container sign-in">
-                <form action="">
+                <form id="formLogin">
                     <h2>Login</h2>
                     <div class="input-group">
                         <input type="email" id="email" required>
@@ -22,9 +22,6 @@
                     </div>
                     <div class="input-group">
                         <input id="pass" type="password" required>
-                        <span class="show-pass" onclick="toggle()">
-                            <i class="far fa-eye"></i>
-                        </span>
                         <label for="pass">Password</label>
                     </div>
                     <div class="remember">
@@ -42,6 +39,7 @@
             </div>
         </div>
         <!-- Javascript -->
-        <script src="./js/auth.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="./js/login.js"></script>
     </body>
 </html>

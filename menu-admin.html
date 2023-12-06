@@ -14,13 +14,13 @@
     <body>
         <nav class="sidebar-navigation">
             <ul>
-                <li class="active">
+                <li>
                     <a href="admin.html" class="nav-link">
                         <i class="fa fa-home"></i>
                         <span class="tooltip">Dashboard</span>
                     </a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="testimoni-admin.html" class="nav-link">
                         <i class="fa-solid fa-heart-circle-bolt"></i>
                         <span class="tooltip">Testimoni</span>
@@ -46,11 +46,33 @@
                 </li>
             </ul>
         </nav>
-        <div class="main-content">
-            <div class="content">
-                <img src="./asset/iconShop.png">
-                <h2>Hi, Welcome</h2>
-                <p>This is the Admin page.</p>
+        <div class="main-content-testimoni">
+            <h1>Menus</h1>
+            <div class="content-wrapper">
+                <div class="form-container">
+                    <h3>Add Menu</h3>
+                    <form id="testimonial-form">
+                        <input type="text" id="name-input" placeholder="Name" required>
+                        <label for="image-input">Insert image</label>
+                        <input type="file" id="image-input" required>
+                        <input type="text" id="price-input" placeholder="Price" required>
+                        <input type="text" id="category-input" placeholder="Category" required>
+                        <textarea id="message-input" placeholder="Description" required></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <div id="testimonials-container">
+                    <table class="testimoni-container">
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Action</th>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
         <div class="footer">
@@ -60,5 +82,7 @@
         </div>
         <!-- Javascript -->
         <script src="./js/admin.js"></script>
+        <script src="./js/menu-admin.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </body>
 </html>
