@@ -17,14 +17,15 @@ formLogin.addEventListener('submit', async function (e) {
             })
         });
 
-        if (login.ok) {
+        if (login.ok) {        
             Swal.fire({
                 icon: 'success',
                 title: 'Login berhasil',
                 text: 'Mantap bos',
-            }).then (() => {
-                window.location.href = 'admin.html';
             });
+            const data = await login.json();
+            localStorage.setItem('token', data.data.token);
+            window.location.href = 'admin.html';
         } else {
             Swal.fire({
                 icon: 'error',
@@ -36,3 +37,18 @@ formLogin.addEventListener('submit', async function (e) {
         console.error(error);
     }
 })
+
+// show/hide password
+function toggle() {
+    const passwordInput = document.getElementById('pass');
+    const showPassIcon = document.querySelector('.show-pass i');
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        showPassIcon.classList.remove('fa-eye');
+        showPassIcon.classList.add('fa-eye-slash');
+    } else {
+        passwordInput.type = 'password';
+        showPassIcon.classList.remove('fa-eye-slash');
+        showPassIcon.classList.add('fa-eye');
+    }
+}

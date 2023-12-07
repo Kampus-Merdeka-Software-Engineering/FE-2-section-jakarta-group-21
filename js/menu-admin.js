@@ -55,7 +55,7 @@ async function submitMenu(event) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}`
+                'Authorization': localStorage.getItem('token')
             },
             body: JSON.stringify({ image, name, price, category, description })
         });

@@ -17,6 +17,21 @@ function validate_password() {
     }
 }
 
+// show/hide password
+function toggle() {
+    const passwordInput = document.getElementById('pass');
+    const showPassIcon = document.querySelector('.show-pass i');
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        showPassIcon.classList.remove('fa-eye');
+        showPassIcon.classList.add('fa-eye-slash');
+    } else {
+        passwordInput.type = 'password';
+        showPassIcon.classList.remove('fa-eye-slash');
+        showPassIcon.classList.add('fa-eye');
+    }
+}
+
 // password strength meter
 function checkStrength(password) {
     let strength = 0;
