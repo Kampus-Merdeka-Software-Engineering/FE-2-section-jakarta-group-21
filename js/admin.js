@@ -19,7 +19,7 @@ logoutLink.addEventListener('click', async (event) => {
     try {
         // Make API request to logout the user
         const response = await fetch('https://be-2-section-jakarta-group-21-production.up.railway.app/api/users/logout', {
-            method: 'GET'
+            method: 'DELETE'
         });
 
         if (response.ok) {

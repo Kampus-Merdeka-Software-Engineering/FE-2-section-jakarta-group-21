@@ -22,12 +22,9 @@ formLogin.addEventListener('submit', async function (e) {
                 icon: 'success',
                 title: 'Login berhasil',
                 text: 'Mantap bos',
-            });
-            const data = await login.json();
-            localStorage.setItem('token', data.data.token);
-            setTimeout(function () {
+            }).then (() => {
                 window.location.href = 'admin.html';
-            }, 3000);
+            });
         } else {
             Swal.fire({
                 icon: 'error',
