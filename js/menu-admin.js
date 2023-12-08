@@ -16,7 +16,7 @@ async function getMenuData() {
 
         if (Array.isArray(menuData)) {
             menuData.forEach((menuItem) => {
-                const { id, image, name, price, category, description } = menuItem;
+                const { id, image, name, price, category, description, stok } = menuItem;
                 const menuContainer = document.querySelector('.testimoni-container');
                 const menuRow = document.createElement('tr');
                 menuRow.classList.add('menu-row');
@@ -25,6 +25,7 @@ async function getMenuData() {
 					<td class="menu-name">${name}</td>
 					<td class="menu-price">${price}</td>
 					<td class="menu-category">${category}</td>
+					<td class="menu-category">${stok}</td>
 					<td class="menu-description">${description}</td>
 					<td class="menu-delete"><button onclick="deleteMenu(${id})">Delete</button></td>
 				`;
@@ -63,6 +64,7 @@ async function submitMenu(event) {
     const imageInput = document.getElementById('image-input');
     const price = document.getElementById('price-input').value;
     const category = document.getElementById('category-input').value;
+    const stok = document.getElementById('stok-input').value;
     const description = document.getElementById('message-input').value;
 
     const formData = new FormData();
@@ -70,6 +72,7 @@ async function submitMenu(event) {
     formData.append('image', imageInput.files[0]);
     formData.append('price', price);
     formData.append('category', category);
+    formData.append('stok', stok);
     formData.append('description', description);
 
     try {
@@ -88,6 +91,7 @@ async function submitMenu(event) {
             document.getElementById('price-input').value = '';
             document.getElementById('category-input').value = '';
             document.getElementById('image-input').value = '';
+            document.getElementById('stok-input').value = '';
             document.getElementById('message-input').value = '';
             await fetchTestimonials();
         }
