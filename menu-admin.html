@@ -51,12 +51,19 @@
             <div class="content-wrapper">
                 <div class="form-container">
                     <h3>Add Menu</h3>
-                    <form id="testimonial-form">
+                    <form id="testimonial-form" enctype="multipart/form-data">
                         <input type="text" id="name-input" placeholder="Name" required>
                         <label for="image-input">Insert image</label>
                         <input type="file" id="image-input" required>
                         <input type="text" id="price-input" placeholder="Price" required>
-                        <input type="text" id="category-input" placeholder="Category" required>
+                        <label for="category-input">Choose category</label>
+                        <select id="category-input" required>
+                            <option value="" disabled selected>Select a category</option>
+                            <option value="Popular Dishes">Popular Dishes</option>
+                            <option value="New Menu">New Menu</option>
+                            <option value="Other Menu">Other Menu</option>
+                            <option value="Exciting Drinks">Exciting Drinks</option>
+                        </select>
                         <textarea id="message-input" placeholder="Description" required></textarea>
                         <button type="submit">Submit</button>
                     </form>

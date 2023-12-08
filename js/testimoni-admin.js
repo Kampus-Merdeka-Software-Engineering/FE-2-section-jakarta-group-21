@@ -38,24 +38,46 @@ async function getTestimoniData() {
 }
 window.addEventListener('DOMContentLoaded', getTestimoniData);
 
+// Function to fetch testimonials
+async function fetchTestimonials() {
+    try {
+        const response = await fetch(apiRoutes.testimonials);
+        if (response.ok) {
+            const testimonials = await response.json();
+            // Process the fetched testimonials
+            // Update the UI or perform any necessary actions
+            console.log(testimonials);
+        } else {
+            throw new Error('Unable to fetch testimonials');
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 // Handle form submission
 async function submitTestimonial(event) {
     event.preventDefault();
 
     const name = document.getElementById('name-input').value;
-    const image = document.getElementById('image-input').value;
+    const imageInput = document.getElementById('image-input');
     const rating = document.getElementById('rate-input').value;
     const description = document.getElementById('message-input').value;
+
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('image', imageInput.files[0]);
+    formData.append('rating', rating);
+    formData.append('description', description);
 
     try {
         // Make API request to create a new testimonial
         const response = await fetch(apiRoutes.testimoniList, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token}`
             },
-            body: JSON.stringify({ name, description, image, rating })
+            body: formData
         });
 
         if (response.ok) {
@@ -67,7 +89,7 @@ async function submitTestimonial(event) {
             await fetchTestimonials();
         }
     } catch (error) {
-        console.error(error);
+        console.log(error);
     }
 }
 
@@ -91,7 +113,10 @@ async function deleteTestimonial(testimonialId) {
         if (result.isConfirmed) {
             // Make API request to delete the testimonial
             const response = await fetch(`https://be-2-section-jakarta-group-21-production.up.railway.app/api/testimoni/${testimonialId}`, {
-                method: 'DELETE'
+                method: 'DELETE',
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
             });
 
             if (response.ok) {
@@ -109,6 +134,6 @@ async function deleteTestimonial(testimonialId) {
             }
         }
     } catch (error) {
-        console.error(error);
+        console.log(error);
     }
 }

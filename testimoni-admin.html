@@ -51,11 +51,19 @@
             <div class="content-wrapper">
                 <div class="form-container">
                     <h3>Add Testimonial</h3>
-                    <form id="testimonial-form">
+                    <form id="testimonial-form" enctype="multipart/form-data">
                         <input type="text" id="name-input" placeholder="Name" required>
                         <label for="image-input">Insert image</label>
                         <input type="file" id="image-input" required>
-                        <input type="text" id="rate-input" placeholder="Rating" required>
+                        <label for="rate-input">Choose rate</label>
+                        <select id="rate-input" required>
+                            <option value="" disabled selected>Select a rating</option>
+                            <option value="satu">1 star</option>
+                            <option value="dua">2 stars</option>
+                            <option value="tiga">3 stars</option>
+                            <option value="empat">4 stars</option>
+                            <option value="lima">5 stars</option>
+                        </select>
                         <textarea id="message-input" placeholder="Message" required></textarea>
                         <button type="submit">Submit</button>
                     </form>

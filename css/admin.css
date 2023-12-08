@@ -171,7 +171,7 @@ body {
     flex-basis: calc(50% - 10px);
 }
 
-input[type="text"], input[type="file"], textarea {
+input[type="text"], input[type="file"], select, textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;

@@ -6,10 +6,10 @@ const apiRoutes = {
 async function getMenuData() {
     try {
         const response = await fetch(apiRoutes.menuList, {
-			headers: {
-				'Authorization': `Bearer ${token}`
-			}
-		});
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
         const responseData = await response.json();
         const menuData = responseData.data;
         console.log(menuData);
@@ -17,10 +17,10 @@ async function getMenuData() {
         if (Array.isArray(menuData)) {
             menuData.forEach((menuItem) => {
                 const { id, image, name, price, category, description } = menuItem;
-				const menuContainer = document.querySelector('.testimoni-container');
-				const menuRow = document.createElement('tr');
-				menuRow.classList.add('menu-row');
-				menuRow.innerHTML = `
+                const menuContainer = document.querySelector('.testimoni-container');
+                const menuRow = document.createElement('tr');
+                menuRow.classList.add('menu-row');
+                menuRow.innerHTML = `
 					<td class="menu-image"><img src="${image}" alt="Menu Image"></td>
 					<td class="menu-name">${name}</td>
 					<td class="menu-price">${price}</td>
@@ -39,25 +39,47 @@ async function getMenuData() {
 }
 window.addEventListener('DOMContentLoaded', getMenuData);
 
+async function fetchTestimonials() {
+    try {
+        const response = await fetch(apiRoutes.testimonials);
+        if (response.ok) {
+            const testimonials = await response.json();
+            // Process the fetched testimonials
+            // Update the UI or perform any necessary actions
+            console.log(testimonials);
+        } else {
+            throw new Error('Unable to fetch testimonials');
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 // Handle form submission
 async function submitMenu(event) {
     event.preventDefault();
 
     const name = document.getElementById('name-input').value;
-    const image = document.getElementById('image-input').value;
+    const imageInput = document.getElementById('image-input');
     const price = document.getElementById('price-input').value;
     const category = document.getElementById('category-input').value;
     const description = document.getElementById('message-input').value;
 
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('image', imageInput.files[0]);
+    formData.append('price', price);
+    formData.append('category', category);
+    formData.append('description', description);
+
     try {
-        // Make API request to create a new testimonial
+        // Make API request to create a new menu item
         const response = await fetch(apiRoutes.menuList, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
                 'Authorization': localStorage.getItem('token')
             },
-            body: JSON.stringify({ image, name, price, category, description })
+            body: formData
         });
 
         if (response.ok) {
@@ -67,15 +89,14 @@ async function submitMenu(event) {
             document.getElementById('category-input').value = '';
             document.getElementById('image-input').value = '';
             document.getElementById('message-input').value = '';
-            messageInput.value = '';
             await fetchTestimonials();
         }
     } catch (error) {
-        console.error(error);
+        console.log(error);
     }
 }
 
-const menuForm = document.getElementById('testimonial-form');
+const menuForm = document.getElementById('menu-form');
 menuForm.addEventListener('submit', submitMenu);
 
 // Delete
@@ -113,6 +134,6 @@ async function deleteMenu(menuId) {
             }
         }
     } catch (error) {
-        console.error(error);
+        console.log(error);
     }
 }
