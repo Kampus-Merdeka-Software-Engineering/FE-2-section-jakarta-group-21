@@ -79,6 +79,28 @@
                         </tr>
                     </table>
                 </div>
+                <div id="update-form-popup" class="update-form-popup">
+                    <form id="update-testimonial-form" class="update-form" enctype="multipart/form-data">
+                        <h2>Update Testtimoni</h2>
+                        <input type="text" id="update-name-input" placeholder="Name" required>
+                        <label for="update-image-input">Insert image</label>
+                        <input type="file" id="update-image-input" required>
+                        <label for="update-rate-input">Choose rate</label>
+                        <select id="update-rate-input" required>
+                            <option value="" disabled selected>Select a rating</option>
+                            <option value="satu">1 star</option>
+                            <option value="dua">2 stars</option>
+                            <option value="tiga">3 stars</option>
+                            <option value="empat">4 stars</option>
+                            <option value="lima">5 stars</option>
+                        </select>
+                        <textarea id="update-message-input" placeholder="Message" required></textarea>
+                        <div class="form-buttons">
+                            <button type="submit">Submit</button>
+                            <button type="button" id="cancel-button">Cancel</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
         <div class="footer">

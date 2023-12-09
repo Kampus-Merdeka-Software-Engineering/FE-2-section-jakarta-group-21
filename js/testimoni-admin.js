@@ -6,10 +6,10 @@ const apiRoutes = {
 async function getTestimoniData() {
     try {
         const response = await fetch(apiRoutes.testimoniList, {
-			headers: {
-				'Authorization': `Bearer ${token}`
-			}
-		});
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
         const responseData = await response.json();
         const testimoniData = responseData.data;
         console.log(testimoniData);
@@ -17,16 +17,20 @@ async function getTestimoniData() {
         if (Array.isArray(testimoniData)) {
             testimoniData.forEach((testimoniItem) => {
                 const { id, name, description, image, rating } = testimoniItem;
-				const testimoniContainer = document.querySelector('.testimoni-container');
-				const testimonialRow = document.createElement('tr');
-				testimonialRow.classList.add('testimonial-row');
-				testimonialRow.innerHTML = `
+                const testimoniContainer = document.querySelector('.testimoni-container');
+                const testimonialRow = document.createElement('tr');
+                testimonialRow.classList.add('testimonial-row');
+                testimonialRow.innerHTML = `
 					<td class="testimonial-image"><img src="${image}" alt="Testimonial Image"></td>
 					<td class="testimonial-name">${name}</td>
 					<td class="testimonial-rating">${rating}</td>
 					<td class="testimonial-description">${description}</td>
-					<td class="testimonial-delete"><button onclick="deleteTestimonial(${id})">Delete</button></td>
+					<td class="testimoni-action">
+                        <button onclick="deleteTestimonial(${id})"><i class="fa-solid fa-trash"></i></button>
+                    </td>
 				`;
+                // ditambahkan jika fungsi get by id telah berjalan
+                // <button id="update-button" onclick="updateTestimonial(${id})"><i class="fa-solid fa-pen"></i></button>
                 testimoniContainer.appendChild(testimonialRow);
             });
         } else {
@@ -37,23 +41,6 @@ async function getTestimoniData() {
     }
 }
 window.addEventListener('DOMContentLoaded', getTestimoniData);
-
-// Function to fetch testimonials
-async function fetchTestimonials() {
-    try {
-        const response = await fetch(apiRoutes.testimonials);
-        if (response.ok) {
-            const testimonials = await response.json();
-            // Process the fetched testimonials
-            // Update the UI or perform any necessary actions
-            console.log(testimonials);
-        } else {
-            throw new Error('Unable to fetch testimonials');
-        }
-    } catch (error) {
-        console.log(error);
-    }
-}
 
 // Handle form submission
 async function submitTestimonial(event) {
@@ -86,7 +73,11 @@ async function submitTestimonial(event) {
             document.getElementById('rate-input').value = '';
             document.getElementById('image-input').value = '';
             document.getElementById('message-input').value = '';
-            await fetchTestimonials();
+            const testimonialRows = document.querySelectorAll('.testimonial-row');
+            testimonialRows.forEach((testimonialRows) => {
+                testimonialRows.innerHTML = '';
+            });
+            await getTestimoniData();
         }
     } catch (error) {
         console.log(error);
@@ -112,7 +103,7 @@ async function deleteTestimonial(testimonialId) {
 
         if (result.isConfirmed) {
             // Make API request to delete the testimonial
-            const response = await fetch(`https://be-2-section-jakarta-group-21-production.up.railway.app/api/testimoni/${testimonialId}`, {
+            const response = await fetch(`${apiRoutes.testimoniList}/${testimonialId}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -121,9 +112,11 @@ async function deleteTestimonial(testimonialId) {
 
             if (response.ok) {
                 // Remove the testimonial from the UI and fetch updated testimonials
-                const testimonialElement = document.getElementById(`testimonial-${testimonialId}`);
-                testimonialElement.remove();
-                await fetchTestimonials();
+                const testimonialRows = document.querySelectorAll('.testimonial-row');
+                testimonialRows.forEach((testimonialRows) => {
+                    testimonialRows.innerHTML = '';
+                });
+                await getTestimoniData();
 
                 // Display success message with SweetAlert
                 await Swal.fire({
@@ -137,3 +130,98 @@ async function deleteTestimonial(testimonialId) {
         console.log(error);
     }
 }
+
+// Update untuk get testimoni by id
+// async function updateTestimonial(testimonialId) {
+//     // Show the pop-up form
+//     const updateFormPopup = document.getElementById('update-form-popup');
+//     updateFormPopup.style.display = 'block';
+
+//     try {
+//         // Fetch the testimonial data
+//         const response = await fetch(`${apiRoutes.testimoniList}`, {
+//             headers: {
+//                 'Authorization': `Bearer ${token}`
+//             }
+//         });
+
+//         if (response.ok) {
+//             const testimonialData = await response.json();
+//             const testimonialToUpdate = testimonialData.find(testimonial => testimonial.id === testimonialId);
+
+//             if (testimonialToUpdate) {
+//                 const { name, description, rating } = testimonialToUpdate;
+
+//                 // Set the form inputs with the retrieved testimonial data
+//                 document.getElementById('update-name-input').value = name;
+//                 document.getElementById('update-rate-input').value = rating;
+//                 document.getElementById('update-message-input').value = description;
+//             } else {
+//                 // Handle error if testimonial is not found
+//                 console.log('Testimonial not found');
+//             }
+//         } else {
+//             // Handle error if testimonial data retrieval fails
+//             console.log('Failed to fetch testimonial data');
+//         }
+//     } catch (error) {
+//         console.log(error);
+//     }
+
+//     // Handle form submission for testimonial update
+//     const updateMenuForm = document.getElementById('update-testimonial-form');
+//     updateMenuForm.addEventListener('submit', async (event) => {
+//         event.preventDefault();
+
+//         const updatedName = document.getElementById('update-name-input').value;
+//         const updatedImage = document.getElementById('update-image-input').files[0];
+//         const updatedRate = document.getElementById('update-rate-input').value;
+//         const updatedDescription = document.getElementById('update-message-input').value;
+
+//         const updatedFormData = new FormData();
+//         updatedFormData.append('name', updatedName);
+//         updatedFormData.append('rate', updatedRate);
+//         updatedFormData.append('description', updatedDescription);
+//         if (updatedImage) {
+//             updatedFormData.append('image', updatedImage);
+//         }
+
+//         try {
+//             // Make API request to update the testimonial
+//             const response = await fetch(`${apiRoutes.testimoniList}/${testimonialId}`, {
+//                 method: 'PUT',
+//                 headers: {
+//                     'Authorization': `Bearer ${token}`
+//                 },
+//                 body: updatedFormData
+//             });
+
+//             if (response.ok) {
+//                 // Hide the update form popup
+//                 updateFormPopup.style.display = 'none';
+//                 // Clear form inputs and fetch updated testimonials
+//                 document.getElementById('update-name-input').value = '';
+//                 document.getElementById('update-image-input').value = '';
+//                 document.getElementById('update-rate-input').value = '';
+//                 document.getElementById('update-message-input').value = '';
+//                 const testimonialRows = document.querySelectorAll('.testimonial-row');
+//                 testimonialRows.forEach((testimonialRow) => {
+//                     testimonialRow.innerHTML = '';
+//                 });
+//                 await getTestimoniData();
+//             } else {
+//                 // Handle error if testimonial update fails
+//                 console.log('Failed to update testimonial');
+//             }
+//         } catch (error) {
+//             console.log(error);
+//         }
+//     });
+// }
+
+// Handle cancel button click
+// document.getElementById('cancel-button').addEventListener('click', () => {
+//     const updateFormPopup = document.getElementById('update-form-popup');
+//     updateFormPopup.style.display = 'none';
+//     document.getElementById('update-testimonial-form').reset();
+// });

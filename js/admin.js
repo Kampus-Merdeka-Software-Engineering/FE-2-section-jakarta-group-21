@@ -19,7 +19,10 @@ logoutLink.addEventListener('click', async (event) => {
     try {
         // Make API request to logout the user
         const response = await fetch('https://be-2-section-jakarta-group-21-production.up.railway.app/api/users/logout', {
-            method: 'DELETE'
+            method: 'DELETE',
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
         });
 
         if (response.ok) {
@@ -27,23 +30,26 @@ logoutLink.addEventListener('click', async (event) => {
             window.location.href = 'index.html';
         } else {
             // Handle logout error
-            console.error('Logout failed');
+            console.log('Logout failed');
         }
     } catch (error) {
-        console.error(error);
+        console.log(error);
     }
 });
 
 let inactivityTimeout;
 function resetInactivityTimeout() {
     clearTimeout(inactivityTimeout);
-    inactivityTimeout = setTimeout(logoutUser, 3 * 60 * 1000); // 3 menit
+    inactivityTimeout = setTimeout(logoutUser, 5 * 60 * 1000); // 5 menit
 }
 
 function logoutUser() {
     console.log('Pengguna telah keluar karena tidak ada aktivitas.');
     fetch('https://be-2-section-jakarta-group-21-production.up.railway.app/api/users/logout', {
-        method: 'DELETE'
+        method: 'DELETE',
+        headers: {
+            'Authorization': `Bearer ${token}`
+        }
     })
         .then(response => {
             if (response.ok) {
@@ -51,11 +57,11 @@ function logoutUser() {
                 window.location.href = 'index.html';
             } else {
                 // Handle logout error
-                console.error('Logout failed');
+                console.log('Logout failed');
             }
         })
         .catch(error => {
-            console.error(error);
+            console.log(error);
         });
 }
 
